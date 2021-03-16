@@ -62,7 +62,7 @@ public class HashTableTest {
                 "deliberately into paranoid avoidable"+
                 "situations";
 
-        LinkedHashMap<String,Integer> hashTable= new LinkedHashMap<>();
+        HashTable<String,Integer> hashTable= new HashTable<>();
         String[] words=para.toLowerCase().split(" ") ;
 
         for(String word : words){
@@ -74,8 +74,7 @@ public class HashTableTest {
                 value=value+1;
             }
         }
-        System.out.println(hashTable);
-        hashTable.remove("avoidable");
+        hashTable.deleteGivennode("avoidable");
         System.out.println(hashTable);
         Assert.assertEquals(null,hashTable.get("avoidable"));
     }
